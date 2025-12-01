@@ -1,0 +1,306 @@
+/* ===============================
+   ⚾ EMERALD LEAGUE - GREEN STYLE
+   Dark theme with glowing emerald accents
+   =============================== */
+
+body {
+  font-family: system-ui, Arial, sans-serif;
+  background: #0b1210;
+  color: #e8f6ed;
+  margin: 0;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 24px;
+}
+
+/* === TABLE STYLES === */
+.table-wrapper {
+  overflow: auto;
+  background: #121a17;
+  border-radius: 12px;
+  padding: 12px;
+  box-shadow: 0 2px 8px rgba(0,255,128,0.15);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+/* 🔹 Header con degradado verde → dorado */
+th {
+  background: linear-gradient(90deg, rgba(0,255,128,0.25) 0%, rgba(255,215,0,0.25) 100%);
+  color: #ecffec;
+  font-weight: 800;
+  font-size: 16px;
+  text-align: center;
+  text-shadow:
+    0 0 8px rgba(0,255,128,0.4),
+    0 0 12px rgba(255,215,0,0.3);
+  padding: 12px 8px;
+  border-bottom: 2px solid rgba(0,255,128,0.4);
+  letter-spacing: 0.5px;
+}
+
+td {
+  font-size: 14px;
+  text-align: center;
+  padding: 10px 8px;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+
+tr:nth-child(-n+8) {
+  background: rgba(0,255,128,0.08);
+}
+
+td.pts {
+  font-weight: bold;
+  color: #ffd700;
+}
+
+/* --- NUEVOS ESTILOS PARA LA TABLA --- */
+/* Estilo para el nombre del equipo en la tabla (más grande) */
+.team-name {
+  font-size: 17px;
+  font-weight: 700;
+  color: #33ff99; 
+  letter-spacing: 0.5px;
+}
+
+/* Estilo para el nombre del jugador (más pequeño) */
+.tag {
+  font-size: 13px;
+  font-weight: 500;
+  color: #b9d8c6; 
+  display: block; 
+  margin: 0;
+}
+/* ---------------------------------- */
+
+
+/* ===============================
+   🏆 WINNER / LOSER COLORS
+   Aumento de contraste y brillo para los equipos
+   =============================== */
+.team { /* Estilo base para todos los equipos */
+  font-size: 19px; /* **Aumento del tamaño de fuente** */
+}
+
+.team.winner {
+  color: #33ff99; /* **Color más brillante** */
+  font-weight: 800; /* Mayor peso */
+  text-shadow: 0 0 8px rgba(51,255,153,0.8); /* Mayor brillo */
+}
+
+.team.loser {
+  color: #e0e0e0; /* **Color blanco brillante para contraste** */
+  font-weight: 600;
+  opacity: 1; /* Eliminamos la opacidad */
+}
+
+/* ===============================
+   📅 TODAY GAMES
+   =============================== */
+.games-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.games-list li {
+  background: #16251c;
+  border: 1px solid rgba(255,255,255,0.06);
+  border-radius: 10px;
+  margin-bottom: 10px;
+  padding: 12px;
+  transition: all 0.2s ease-in-out;
+  box-shadow: 0 2px 4px rgba(0,255,128,0.15);
+}
+
+.games-list li:hover {
+  background: #1f3225;
+  transform: scale(1.02);
+}
+
+.game-line {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 20px; /* **Aumento del tamaño de fuente general de la línea** */
+  font-weight: 700;
+  color: #eaffea;
+}
+
+.game-line .score {
+  color: #ffd700;
+  font-size: 22px; /* Aumento de la puntuación para que coincida */
+  font-weight: 800;
+  margin: 0 8px;
+  text-shadow: 0 0 6px rgba(255,215,0,0.4);
+}
+
+.game-time {
+  font-size: 13px;
+  color: #b3d8c0;
+  margin-top: 4px;
+  text-align: right;
+  font-style: italic;
+}
+
+/* ===============================
+   ✨ TITLE & HEADERS
+   =============================== */
+h1 {
+  font-size: 48px;
+  color: #00ff88;
+  text-align: center;
+  font-weight: 900;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  text-shadow:
+    0 0 12px rgba(0,255,128,0.8),
+    0 0 25px rgba(0,255,128,0.6),
+    0 0 45px rgba(0,255,128,0.3);
+  margin-bottom: 8px;
+  animation: pulseEmerald 4s infinite ease-in-out;
+}
+
+@keyframes pulseEmerald {
+  0%, 100% {
+    text-shadow:
+      0 0 10px rgba(0,255,128,0.7),
+      0 0 20px rgba(0,255,128,0.4),
+      0 0 40px rgba(0,255,128,0.2);
+  }
+  50% {
+    text-shadow:
+      0 0 20px rgba(0,255,128,1),
+      0 0 40px rgba(0,255,128,0.8),
+      0 0 80px rgba(0,255,128,0.5);
+  }
+}
+
+h2 {
+  font-size: 22px;
+  margin-top: 30px;
+  color: #a3f0c3;
+}
+
+p.muted {
+  text-align: center;
+  color: #b9d8c6;
+  margin-bottom: 20px;
+}
+
+/* ===============================
+   📱 RESPONSIVE DESIGN
+   =============================== */
+@media (max-width: 600px) {
+  h1 { font-size: 36px; }
+  th, td { font-size: 12px; padding: 8px 4px; }
+  .team-name { font-size: 14px; } /* Ajuste responsive para el nombre del equipo */
+  .tag { font-size: 11px; } /* Ajuste responsive para el nombre del jugador */
+  .game-line { font-size: 17px; } /* Ajuste responsive para la línea */
+  .game-line .score { font-size: 19px; }
+  .team { font-size: 16px; } /* Ajuste responsive para el nombre del equipo en juegos */
+  .game-time { font-size: 11px; }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ===============================
+   📜 HISTORY ACCORDION
+   =============================== */
+.history-group {
+  background: #121a17;
+  border: 1px solid rgba(0, 255, 128, 0.2);
+  border-radius: 12px;
+  margin-bottom: 12px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.history-group[open] {
+  border-color: rgba(0, 255, 128, 0.5);
+  box-shadow: 0 4px 12px rgba(0, 255, 128, 0.1);
+}
+
+summary {
+  padding: 16px;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 16px;
+  color: #e8f6ed;
+  background: linear-gradient(90deg, rgba(0,255,128,0.1) 0%, rgba(11,18,16,0) 100%);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none; /* Ocultar triangulo default en algunos browsers */
+  user-select: none;
+}
+
+summary::-webkit-details-marker {
+  display: none; /* Ocultar triangulo en Chrome/Safari */
+}
+
+summary:hover {
+  background: linear-gradient(90deg, rgba(0,255,128,0.2) 0%, rgba(11,18,16,0) 100%);
+}
+
+summary:after {
+  content: '+';
+  font-size: 20px;
+  color: #00ff88;
+  font-weight: bold;
+  transition: transform 0.3s;
+}
+
+details[open] summary:after {
+  transform: rotate(45deg);
+  content: '+';
+}
+
+.count-badge {
+  background: rgba(0, 0, 0, 0.4);
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 12px;
+  color: #ffd700;
+  border: 1px solid rgba(255, 215, 0, 0.3);
+}
+
+/* Ajuste para la lista dentro del historial */
+.history-group .games-list {
+  padding: 10px;
+  background: #0b1210;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.history-group .games-list li {
+  margin-bottom: 8px;
+  padding: 8px 12px;
+  background: #16251c;
+}
+
+/* Animación suave al abrir */
+details[open] .games-list {
+  animation: slideDown 0.3s ease-out;
+}
+
+@keyframes slideDown {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}

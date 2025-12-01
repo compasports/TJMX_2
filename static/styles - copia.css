@@ -1,0 +1,251 @@
+/* ===============================
+   ⚾ BUMS LEAGUE - FINAL STYLE
+   Modern dark theme with neon details
+   =============================== */
+
+body {
+  font-family: system-ui, Arial, sans-serif;
+  background: #0b1220;
+  color: #e8eefc;
+  margin: 0;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 24px;
+}
+
+.hidden {
+  display: none;
+}
+
+/* === TABLE STYLES === */
+.table-wrapper {
+  overflow: auto;
+  background: #121a2b;
+  border-radius: 12px;
+  padding: 12px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+/* 🔹 Encabezado de tabla mejorado */
+th {
+  color: #00e0ff; /* azul brillante */
+  font-weight: 800;
+  font-size: 16px; /* más grande */
+  text-align: center;
+  background: rgba(0, 224, 255, 0.08);
+  text-shadow: 0 0 6px rgba(0,224,255,0.4);
+  letter-spacing: 0.5px;
+  padding: 12px 8px;
+  border-bottom: 2px solid rgba(0, 224, 255, 0.4);
+}
+
+td {
+  font-size: 14px;
+  text-align: center;
+  padding: 10px 8px;
+  border-bottom: 1px solid rgba(255,255,255,.08);
+}
+
+.num {
+  text-align: center;
+}
+
+tr:nth-child(-n+8) {
+  background: rgba(255, 215, 0, 0.08);
+}
+
+td.pts {
+  font-weight: bold;
+  color: #ffd700;
+}
+
+.tag {
+  background: rgba(77,163,255,.12);
+  color: #cfe5ff;
+  padding: 2px 8px;
+  border-radius: 999px;
+  font-size: 12px;
+}
+
+.muted {
+  color: #9fb3d1;
+}
+
+#loading {
+  color: #9fb3d1;
+  margin: 8px 0;
+}
+
+#error {
+  background: #2a0f13;
+  border: 1px solid #4b151b;
+  color: #ffb3b8;
+  padding: 10px 12px;
+  border-radius: 8px;
+  margin: 10px 0;
+}
+
+/* ===============================
+   📅 TODAY GAMES SECTION
+   =============================== */
+
+.games-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.games-list li {
+  background: #1b2438;
+  border: 1px solid rgba(255,255,255,.08);
+  border-radius: 10px;
+  margin-bottom: 10px;
+  padding: 12px;
+  transition: all 0.2s ease-in-out;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.25);
+}
+
+.games-list li:hover {
+  background: #242f4a;
+  transform: scale(1.02);
+}
+
+.game-line {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 18px;
+  font-weight: 700;
+  color: #f5f7ff;
+  text-shadow: 0 0 4px rgba(0,0,0,0.4);
+}
+
+.game-line .team {
+  flex: 1;
+  color: #ffffff;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+}
+
+.game-line .score {
+  color: #ffd700;
+  font-size: 20px;
+  font-weight: 800;
+  margin: 0 8px;
+  text-shadow: 0 0 6px rgba(255,215,0,0.4);
+}
+
+.game-time {
+  font-size: 13px;
+  color: #9fb3d1;
+  margin-top: 4px;
+  text-align: right;
+  font-style: italic;
+}
+
+/* ===============================
+   🏆 WINNER / LOSER COLORS
+   =============================== */
+
+.team.winner {
+  color: #00ff88;
+  font-weight: 700;
+  text-shadow: 0 0 6px rgba(0,255,136,0.4);
+}
+
+.team.loser {
+  color: #b0b8c6;
+  font-weight: 500;
+  opacity: 0.8;
+}
+
+/* ===============================
+   ✨ ANIMATION EFFECTS
+   =============================== */
+
+#games-list li {
+  animation: fadeInUp 0.5s ease;
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(6px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ===============================
+   🏷️ HEADERS & TITLES
+   =============================== */
+
+/* --- Título principal --- */
+h1 {
+  font-size: 46px;
+  color: #00e0ff;
+  text-align: center;
+  font-weight: 900;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  text-shadow:
+    0 0 12px rgba(0, 224, 255, 0.8),
+    0 0 25px rgba(0, 224, 255, 0.6),
+    0 0 45px rgba(0, 224, 255, 0.3);
+  margin-bottom: 8px;
+  animation: glowSweep 5s infinite linear;
+}
+
+/* 🔹 Animación de brillo que recorre el texto */
+@keyframes glowSweep {
+  0%, 100% { text-shadow:
+    0 0 10px rgba(0,224,255,0.6),
+    0 0 20px rgba(0,224,255,0.4),
+    0 0 40px rgba(0,224,255,0.2); }
+  50% { text-shadow:
+    0 0 20px rgba(0,224,255,0.8),
+    0 0 40px rgba(0,224,255,0.6),
+    0 0 80px rgba(0,224,255,0.4); }
+}
+
+/* --- Subtítulos (Standings / Today Games) --- */
+h2 {
+  font-size: 22px;
+  margin-top: 30px;
+  color: #9fb3d1;
+  text-align: left;
+}
+
+/* --- Texto secundario --- */
+p.muted {
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 20px;
+  font-size: 15px;
+}
+
+/* ===============================
+   📱 RESPONSIVE DESIGN
+   =============================== */
+
+@media (max-width: 600px) {
+  h1 { font-size: 34px; letter-spacing: 2px; }
+  th, td { font-size: 12px; padding: 8px 4px; }
+  .game-line { font-size: 15px; }
+  .game-time { font-size: 11px; }
+
+  th.num, td.num {
+    text-align: center;
+    padding: 6px 2px;
+  }
+
+  /* compactar columnas W/L */
+  th:nth-child(4), td:nth-child(4),
+  th:nth-child(5), td:nth-child(5) {
+    width: 40px;
+  }
+}

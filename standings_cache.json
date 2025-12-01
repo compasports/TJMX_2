@@ -1,0 +1,149 @@
+{
+  "standings": [
+    {
+      "user": "ENOVA23",
+      "team": "Red Sox",
+      "scheduled": 77,
+      "played": 10,
+      "wins": 4,
+      "losses": 6,
+      "remaining": 67,
+      "k": 5,
+      "points": 18
+    },
+    {
+      "user": "EFLORES1306",
+      "team": "Yankees",
+      "scheduled": 77,
+      "played": 7,
+      "wins": 4,
+      "losses": 3,
+      "remaining": 70,
+      "k": 8,
+      "points": 15
+    },
+    {
+      "user": "TheTsunami24",
+      "team": "Phillies",
+      "scheduled": 77,
+      "played": 6,
+      "wins": 4,
+      "losses": 2,
+      "remaining": 71,
+      "k": 9,
+      "points": 14
+    },
+    {
+      "user": "alex08201996",
+      "team": "Blue Jays",
+      "scheduled": 77,
+      "played": 4,
+      "wins": 4,
+      "losses": 0,
+      "remaining": 73,
+      "k": 11,
+      "points": 12
+    },
+    {
+      "user": "Tabla25",
+      "team": "Padres",
+      "scheduled": 77,
+      "played": 3,
+      "wins": 3,
+      "losses": 0,
+      "remaining": 74,
+      "k": 12,
+      "points": 9
+    },
+    {
+      "user": "Sacapeo860",
+      "team": "Mets",
+      "scheduled": 77,
+      "played": 3,
+      "wins": 1,
+      "losses": 2,
+      "remaining": 74,
+      "k": 12,
+      "points": 5
+    },
+    {
+      "user": "osnielito4004",
+      "team": "Tigers",
+      "scheduled": 77,
+      "played": 3,
+      "wins": 0,
+      "losses": 3,
+      "remaining": 74,
+      "k": 12,
+      "points": 3
+    },
+    {
+      "user": "Santinueva3",
+      "team": "Cubs",
+      "scheduled": 77,
+      "played": 3,
+      "wins": 0,
+      "losses": 3,
+      "remaining": 74,
+      "k": 12,
+      "points": 3
+    },
+    {
+      "user": "Eduardo94Cuba",
+      "team": "Mariners",
+      "scheduled": 77,
+      "played": 2,
+      "wins": 0,
+      "losses": 2,
+      "remaining": 75,
+      "k": 13,
+      "points": 2
+    },
+    {
+      "user": "Handy-Barreto",
+      "team": "Dodgers",
+      "scheduled": 77,
+      "played": 1,
+      "wins": 0,
+      "losses": 1,
+      "remaining": 76,
+      "k": 14,
+      "points": 1
+    }
+  ],
+  "games_today": [
+    "Yankees 1 - Tigers 0  - 01-12-2025 - 12:10 am ET",
+    "Blue Jays 5 - Mariners 3  - 01-12-2025 - 12:26 am ET",
+    "Red Sox 0 - Yankees 8  - 01-12-2025 - 1:57 am ET",
+    "Mets 1 - Red Sox 2  - 01-12-2025 - 3:11 pm ET",
+    "Padres 3 - Red Sox 0  - 01-12-2025 - 4:27 pm ET"
+  ],
+  "games_history": {
+    "01-12-2025": [
+      "Padres 3 - Red Sox 0  - 01-12-2025 - 4:27 pm ET",
+      "Padres 3 - Red Sox 0  - 01-12-2025 - 4:03 pm ET",
+      "Mets 1 - Red Sox 2  - 01-12-2025 - 3:11 pm ET",
+      "Red Sox 0 - Yankees 8  - 01-12-2025 - 1:57 am ET",
+      "Blue Jays 5 - Mariners 3  - 01-12-2025 - 12:26 am ET",
+      "Yankees 1 - Tigers 0  - 01-12-2025 - 12:10 am ET"
+    ],
+    "30-11-2025": [
+      "Yankees 2 - Red Sox 1  - 30-11-2025 - 9:04 pm ET",
+      "Yankees 0 - Red Sox 0  - 30-11-2025 - 8:27 pm ET",
+      "Padres 2 - Phillies 1  - 30-11-2025 - 8:20 pm ET",
+      "Red Sox 0 - Phillies 3  - 30-11-2025 - 7:39 pm ET",
+      "Phillies 4 - Red Sox 3  - 30-11-2025 - 3:33 pm ET",
+      "Tigers 1 - Red Sox 4  - 30-11-2025 - 4:13 am ET",
+      "Yankees 6 - Mariners 1  - 30-11-2025 - 1:25 am ET",
+      "Padres 3 - Phillies 2  - 30-11-2025 - 12:24 am ET"
+    ],
+    "29-11-2025": [
+      "Cubs 1 - Blue Jays 6  - 29-11-2025 - 10:35 pm ET",
+      "Blue Jays 7 - Cubs 4  - 29-11-2025 - 9:58 pm ET",
+      "Blue Jays 0 - Cubs 0  - 29-11-2025 - 9:13 pm ET",
+      "Red Sox 1 - Mets 4  - 29-11-2025 - 6:50 pm ET",
+      "Mets 0 - Red Sox 2  - 29-11-2025 - 6:00 pm ET"
+    ]
+  },
+  "last_updated": "2025-12-01 19:58:12"
+}
