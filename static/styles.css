@@ -52,8 +52,7 @@ td {
   border-bottom: 1px solid rgba(255,255,255,0.08);
 }
 
-tr:nth-child(-n+8) {
-  background: rgba(0,255,128,0.08);
+
 }
 
 td.pts {
@@ -221,86 +220,3 @@ p.muted {
 
 
 
-/* ===============================
-   📜 HISTORY ACCORDION
-   =============================== */
-.history-group {
-  background: #121a17;
-  border: 1px solid rgba(0, 255, 128, 0.2);
-  border-radius: 12px;
-  margin-bottom: 12px;
-  overflow: hidden;
-  transition: all 0.3s ease;
-}
-
-.history-group[open] {
-  border-color: rgba(0, 255, 128, 0.5);
-  box-shadow: 0 4px 12px rgba(0, 255, 128, 0.1);
-}
-
-summary {
-  padding: 16px;
-  cursor: pointer;
-  font-weight: 700;
-  font-size: 16px;
-  color: #e8f6ed;
-  background: linear-gradient(90deg, rgba(0,255,128,0.1) 0%, rgba(11,18,16,0) 100%);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  list-style: none; /* Ocultar triangulo default en algunos browsers */
-  user-select: none;
-}
-
-summary::-webkit-details-marker {
-  display: none; /* Ocultar triangulo en Chrome/Safari */
-}
-
-summary:hover {
-  background: linear-gradient(90deg, rgba(0,255,128,0.2) 0%, rgba(11,18,16,0) 100%);
-}
-
-summary:after {
-  content: '+';
-  font-size: 20px;
-  color: #00ff88;
-  font-weight: bold;
-  transition: transform 0.3s;
-}
-
-details[open] summary:after {
-  transform: rotate(45deg);
-  content: '+';
-}
-
-.count-badge {
-  background: rgba(0, 0, 0, 0.4);
-  padding: 4px 10px;
-  border-radius: 20px;
-  font-size: 12px;
-  color: #ffd700;
-  border: 1px solid rgba(255, 215, 0, 0.3);
-}
-
-/* Ajuste para la lista dentro del historial */
-.history-group .games-list {
-  padding: 10px;
-  background: #0b1210;
-  border-top: 1px solid rgba(255, 255, 255, 0.05);
-}
-
-.history-group .games-list li {
-  margin-bottom: 8px;
-  padding: 8px 12px;
-  background: #16251c;
-}
-
-/* Animación suave al abrir */
-details[open] .games-list {
-  animation: slideDown 0.3s ease-out;
-}
-
-@keyframes slideDown {
-  from { opacity: 0; transform: translateY(-10px); }
-  to { opacity: 1; transform: translateY(0); }
-}
