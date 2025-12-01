@@ -35,7 +35,7 @@ API = "https://mlb25.theshow.com/apis/game_history.json"
 PLATFORM = "psn"
 MODE = "LEAGUE"
 SINCE = datetime(2025, 11, 29)  # ← usaremos esta fecha como inicio de Postemporada
-PAGES = tuple(range(1, 3))
+PAGES = tuple(range(1, 5))
 TIMEOUT = 20
 RETRIES = 2
 
@@ -68,7 +68,10 @@ FETCH_ALIASES = {
 }
 
 TEAM_RECORD_ADJUSTMENTS = {
-#"Dodgers": (0, 0),
+"Yankees": (0, -3),
+"Blue Jays": (-1, 0),
+"Cubs": (0, -1),
+"Red Sox": (-1, 0),
 
 }
 
