@@ -46,10 +46,7 @@
       </div>
     </section>
       
-    <section id="history-section" class="hidden">
-      <h2>📜 Game History</h2>
-      <div id="history-container"></div>
-    </section>
+
   </div>
 
   <script>
@@ -197,81 +194,7 @@
         }
         show(el.gamesSection);
 
-        // ✅ Game History (Grouped) - NUEVA SECCION
-        const historySection = document.getElementById('history-section');
-        const historyContainer = document.getElementById('history-container');
-        
-        if (historyContainer) {
-            historyContainer.innerHTML = '';
-            const historyData = data.games_history || {};
-            const dates = Object.keys(historyData);
 
-            if (dates.length === 0) {
-                historyContainer.innerHTML = '<p class="muted">No history available.</p>';
-            } else {
-                dates.forEach(dateKey => {
-                    const gamesList = historyData[dateKey];
-                    
-                    // Crear el elemento <details>
-                    const details = document.createElement('details');
-                    details.className = 'history-group';
-                    
-                    // Crear el <summary>
-                    const summary = document.createElement('summary');
-                    summary.innerHTML = `<span>📅 ${dateKey}</span> <span class="count-badge">${gamesList.length} Games</span>`;
-                    details.appendChild(summary);
-
-                    // Crear la lista <ul>
-                    const ul = document.createElement('ul');
-                    ul.className = 'games-list';
-
-                    gamesList.forEach(gameStr => {
-                        const li = document.createElement('li');
-                        
-                        // Reutilizar regex para parsear el string del historial
-                        const regex = /^([\w\s]+)\s+(\d+)\s*-\s*([\w\s]+)\s+(\d+)\s*-\s*(.*)$/i;
-                        const match = gameStr.trim().match(regex);
-
-                        if (match) {
-                            const homeTeam = match[1].trim();
-                            const homeScore = parseInt(match[2]);
-                            const awayTeam = match[3].trim();
-                            const awayScore = parseInt(match[4]);
-                            const timePart = match[5];
-
-                            let homeClass = 'team';
-                            let awayClass = 'team';
-                            if (homeScore > awayScore) {
-                                homeClass += ' winner';
-                                awayClass += ' loser';
-                            } else if (awayScore > homeScore) {
-                                awayClass += ' winner';
-                                homeClass += ' loser';
-                            }
-
-                            // Usar estilos ligeramente más pequeños para el historial si se prefiere
-                            li.innerHTML = `
-                            <div class="game-line" style="font-size: 16px;">
-                                <span class="${homeClass}">${homeTeam}</span>
-                                <span class="score" style="font-size: 18px;">${homeScore}</span>
-                                <span>-</span>
-                                <span class="score" style="font-size: 18px;">${awayScore}</span>
-                                <span class="${awayClass}" style="text-align:right;">${awayTeam}</span>
-                            </div>
-                            <div class="game-time" style="font-size: 11px;">${timePart}</div>
-                            `;
-                        } else {
-                            li.textContent = gameStr;
-                        }
-                        ul.appendChild(li);
-                    });
-
-                    details.appendChild(ul);
-                    historyContainer.appendChild(details);
-                });
-                show(historySection);
-            }
-        }
 
       }catch(e){
         el.error.textContent = 'Unable to load data: ' + e.message;
