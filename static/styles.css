@@ -53,8 +53,6 @@ td {
 }
 
 
-}
-
 td.pts {
   font-weight: bold;
   color: #ffd700;
@@ -150,6 +148,46 @@ td.pts {
 }
 
 /* ===============================
+   💣 HOMERUN RANKING BUTTON
+   =============================== */
+.homerun-link-wrapper {
+  /* Centra el botón horizontalmente */
+  text-align: center; 
+  /* Agrega espacio arriba y abajo */
+  margin: 30px 0 40px; 
+}
+
+.homerun-button {
+  /* Estilo base del botón */
+  display: inline-block;
+  padding: 18px 35px; /* **Aumento del padding** (más grande) */
+  font-size: 22px; /* **Aumento del tamaño de fuente** */
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-decoration: none;
+  border-radius: 50px; /* Borde más curvo */
+  
+  /* Color de fondo: Dorado/Amarillo */
+  background: linear-gradient(135deg, #ffd700 0%, #ffaa00 100%);
+  color: #121a17; /* Color oscuro para el texto */
+  border: 3px solid #ffeeaa; /* Borde brillante */
+  
+  /* Sombra para efecto 3D/Brillo */
+  box-shadow: 0 4px 15px rgba(255, 215, 0, 0.5), 0 0 30px rgba(255, 215, 0, 0.3);
+  
+  transition: all 0.3s ease;
+}
+
+.homerun-button:hover {
+  /* Efecto al pasar el mouse */
+  background: linear-gradient(135deg, #ffaa00 0%, #ffd700 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(255, 215, 0, 0.8), 0 0 40px rgba(255, 215, 0, 0.5);
+}
+
+
+/* ===============================
    ✨ TITLE & HEADERS
    =============================== */
 h1 {
@@ -206,17 +244,10 @@ p.muted {
   .game-line .score { font-size: 19px; }
   .team { font-size: 16px; } /* Ajuste responsive para el nombre del equipo en juegos */
   .game-time { font-size: 11px; }
+  
+  /* Ajuste responsive para el botón de Jonrones */
+  .homerun-button {
+    padding: 12px 20px;
+    font-size: 16px;
+  }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
