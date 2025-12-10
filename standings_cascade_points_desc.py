@@ -68,13 +68,13 @@ FETCH_ALIASES = {
 }
 
 TEAM_RECORD_ADJUSTMENTS = {
-"Yankees": (12, 2),
-"Blue Jays": (10, 3),
+"Yankees": (11, 2),
+"Blue Jays": (9, 1),
     "Padres": (5, 2),
         "Phillies": (6, 7),
         "Mariners": (1, 2),
 "Cubs": (3, 5),
-"Red Sox": (3, 13),
+"Red Sox": (3, 12),
         "Dodgers": (3, 6),
         "Mets": (3, 4),
         "Tigers": (0, 3),
